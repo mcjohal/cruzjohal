@@ -1,0 +1,139 @@
+{% extends "base.html" %}
+{% block title %}Python Resources — Cruz Johal{% endblock %}
+
+{% block content %}
+<div class="page-header">
+  <div class="container">
+    <h1>Python Resources</h1>
+    <p>Everything you need for Intro and Advanced Python at CSU Stanislaus</p>
+  </div>
+</div>
+
+<section class="py-5">
+  <div class="container">
+
+    <!-- GETTING STARTED -->
+    <div class="mb-5" id="resources">
+      <div class="eyebrow">Getting Started</div>
+      <h3 class="brand-serif mb-3">Python Essentials</h3>
+      <ul class="resource-list">
+        <li><a href="https://www.python.org/downloads/" target="_blank"><i class="bi bi-download text-success"></i> Download Python — official python.org installer</a></li>
+        <li><a href="https://code.visualstudio.com/" target="_blank"><i class="bi bi-code-square text-primary"></i> VS Code — recommended code editor</a></li>
+        <li><a href="https://docs.python.org/3/tutorial/" target="_blank"><i class="bi bi-book text-info"></i> Official Python Tutorial — from python.org</a></li>
+        <li><a href="https://repl.it/" target="_blank"><i class="bi bi-cloud text-secondary"></i> Replit — run Python in the browser (no install needed)</a></li>
+      </ul>
+    </div>
+
+    <!-- GIT -->
+    <div class="mb-5" id="git">
+      <div class="eyebrow">Version Control</div>
+      <h3 class="brand-serif mb-1">Git &amp; GitHub</h3>
+      <p class="text-muted mb-3">Every software engineer uses Git. These resources get you started with version control so you can track changes, collaborate, and build a portfolio.</p>
+      <ul class="resource-list mb-3">
+        <li><a href="https://git-scm.com/downloads" target="_blank"><i class="bi bi-download text-warning"></i> Install Git — git-scm.com</a></li>
+        <li><a href="https://github.com" target="_blank"><i class="bi bi-github text-dark"></i> GitHub — create a free account</a></li>
+        <li><a href="https://docs.github.com/en/get-started/quickstart" target="_blank"><i class="bi bi-rocket text-primary"></i> GitHub Quickstart Guide</a></li>
+        <li><a href="https://education.github.com/students" target="_blank"><i class="bi bi-mortarboard text-success"></i> GitHub Student Developer Pack — free tools for students</a></li>
+      </ul>
+      <div class="code-dark">
+        <code>git init                   # start a new repo
+git clone &lt;url&gt;            # copy a repo from GitHub
+git status                 # see what's changed
+git add .                  # stage all changes
+git commit -m "message"    # save a snapshot
+git push origin main       # push to GitHub
+git pull                   # get latest from remote
+git branch feature-name    # create a new branch</code>
+      </div>
+    </div>
+
+    <!-- CODECHECK -->
+    <div class="mb-5" id="codecheck">
+      <div class="eyebrow">Practice Labs</div>
+      <h3 class="brand-serif mb-1">CodeCheck Assignments</h3>
+      <p class="text-muted mb-3">CodeCheck.io gives you instant feedback on your code. These labs are used in class — practice them as much as you want.</p>
+      <ul class="resource-list">
+        <li><a href="https://codecheck.io/assignment/25031917088pmzfn9a9uxgr4rrdaeg25gp6" target="_blank"><i class="bi bi-check2-circle text-success"></i> Lab: print() — your first Python output</a></li>
+        <li><a href="https://codecheck.io" target="_blank"><i class="bi bi-link-45deg text-primary"></i> CodeCheck.io main site</a></li>
+      </ul>
+    </div>
+
+    <!-- REGEX -->
+    <div class="mb-5" id="regex">
+      <div class="eyebrow">Reference</div>
+      <h3 class="brand-serif mb-3">Regex Cheat Sheet</h3>
+      <div class="card shadow-sm border-0">
+        <div class="card-body">
+          <div class="row g-4" style="font-size:.92rem;">
+            <div class="col-sm-6 col-lg-3">
+              <h6 class="fw-bold">Character Classes</h6>
+              <ul class="list-unstyled small">
+                <li><code>.</code> — any char except newline</li>
+                <li><code>\d</code> — digit [0-9]</li>
+                <li><code>\D</code> — non-digit</li>
+                <li><code>\w</code> — word char [a-zA-Z0-9_]</li>
+                <li><code>\W</code> — non-word char</li>
+                <li><code>\s</code> — whitespace</li>
+                <li><code>\S</code> — non-whitespace</li>
+              </ul>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+              <h6 class="fw-bold">Quantifiers</h6>
+              <ul class="list-unstyled small">
+                <li><code>*</code> — 0 or more</li>
+                <li><code>+</code> — 1 or more</li>
+                <li><code>?</code> — 0 or 1 (optional)</li>
+                <li><code>{n}</code> — exactly n times</li>
+                <li><code>{n,m}</code> — between n and m</li>
+                <li><code>^</code> — start of string</li>
+                <li><code>$</code> — end of string</li>
+              </ul>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+              <h6 class="fw-bold">Python re Module</h6>
+              <ul class="list-unstyled small">
+                <li><code>re.match(p, s)</code> — at start</li>
+                <li><code>re.search(p, s)</code> — anywhere</li>
+                <li><code>re.findall(p, s)</code> — all matches</li>
+                <li><code>re.sub(p, r, s)</code> — replace</li>
+                <li><code>re.compile(p)</code> — compile</li>
+              </ul>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+              <h6 class="fw-bold">Groups &amp; Anchors</h6>
+              <ul class="list-unstyled small">
+                <li><code>(abc)</code> — capture group</li>
+                <li><code>(?:abc)</code> — non-capture</li>
+                <li><code>a|b</code> — a or b</li>
+                <li><code>[abc]</code> — any of a, b, c</li>
+                <li><code>[^abc]</code> — not a, b, or c</li>
+                <li><code>\b</code> — word boundary</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- POINTERS -->
+    <div id="pointers">
+      <div class="eyebrow">Advanced Topic</div>
+      <h3 class="brand-serif mb-2">References &amp; Pointers in Python</h3>
+      <p class="text-muted mb-3">Python doesn't have pointers like C/C++, but it uses <em>references</em>. Every variable holds a reference to an object, not the object itself.</p>
+      <div class="code-dark">
+        <code># Both variables point to the SAME list
+a = [1, 2, 3]
+b = a          # b is a reference to the same object
+b.append(4)
+print(a)       # [1, 2, 3, 4]  ← a changed too!
+
+# Use .copy() or list() to avoid this
+c = a.copy()
+c.append(99)
+print(a)       # [1, 2, 3, 4]  ← a unchanged</code>
+      </div>
+    </div>
+
+  </div>
+</section>
+{% endblock %}

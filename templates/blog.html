@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+{% block title %}Blog — Cruz Johal{% endblock %}
+
+{% block content %}
+<div class="page-header">
+  <div class="container">
+    <h1>Blog</h1>
+    <p>Python programming, AI trends, and advice for tech careers</p>
+  </div>
+</div>
+
+<section class="py-5">
+  <div class="container">
+    {% if posts %}
+    <div class="row g-4">
+      {% for post in posts %}
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm border-0">
+          <div class="card-body">
+            <div class="post-date mb-1">{{ post.date }}</div>
+            <h5 class="post-title mb-2">{{ post.title }}</h5>
+            <p class="text-muted small">{{ post.excerpt }}</p>
+          </div>
+          <div class="card-footer bg-transparent border-0">
+            <a class="btn btn-outline-primary btn-sm" href="{{ url_for('post', slug=post.slug) }}">Read article →</a>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    {% else %}
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0">
+          <div class="card-body">
+            <div class="fs-2 mb-2">🤖</div>
+            <span class="badge bg-warning text-dark mb-2">AI</span>
+            <h5 class="post-title">Where is Generative AI Heading?</h5>
+            <p class="text-muted small">An exploration of where large language models, agents, and generative tools are taking us — and what that means for students and engineers.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0">
+          <div class="card-body">
+            <div class="fs-2 mb-2">💼</div>
+            <span class="badge bg-info mb-2">Career</span>
+            <h5 class="post-title">Most Profitable Skills by 2030</h5>
+            <p class="text-muted small">Which technical skills will command the highest salaries in the next five years? Python, AI engineering, and data literacy top the list.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0">
+          <div class="card-body">
+            <div class="fs-2 mb-2">🐍</div>
+            <span class="badge bg-success mb-2">Python</span>
+            <h5 class="post-title">Benefits of Learning Python in 2026</h5>
+            <p class="text-muted small">Python remains the most in-demand language for data science, automation, AI, and web development. Here's why you should learn it today.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endif %}
+  </div>
+</section>
+{% endblock %}

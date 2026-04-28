@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}Blog Post — Cruz Johal{% endblock %}
+
+{% block content %}
+<div class="page-header">
+  <div class="container">
+    <a href="{{ url_for('blog') }}" class="text-white-50 text-decoration-none small">
+      <i class="bi bi-arrow-left me-1"></i>Back to Blog
+    </a>
+  </div>
+</div>
+<section class="py-5">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="card shadow-sm border-0 p-4">
+          <div class="prose">{{ content | safe }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

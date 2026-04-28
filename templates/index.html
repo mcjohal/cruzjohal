@@ -1,0 +1,219 @@
+{% extends "base.html" %}
+{% block title %}Cruz Johal — Python Lecturer | CSU Stanislaus{% endblock %}
+
+{% block content %}
+
+<!-- HERO -->
+<section class="hero-section">
+  <div class="container position-relative" style="z-index:1;">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-8 order-2 order-lg-1">
+        <span class="badge bg-warning text-dark mb-3" style="font-size:.75rem;letter-spacing:.06em;">
+          🎓 Lecturer &amp; Software Engineering Veteran
+        </span>
+        <h1 class="brand-serif text-white display-5 mb-3">
+          Maricruz (Cruz) Johal, <em class="text-warning fst-normal">MBA</em>
+        </h1>
+        <p class="lead text-white-75 mb-4" style="color:rgba(255,255,255,.8);">
+          27 years in the software industry — now empowering students at
+          <strong class="text-white">CSU Stanislaus</strong> with real-world
+          Python skills, AI literacy, and the confidence to build things that matter.
+        </p>
+        <div class="d-flex flex-wrap gap-2">
+          <a class="btn btn-warning text-dark fw-semibold" href="{{ url_for('teaching') }}">
+            <i class="bi bi-mortarboard me-1"></i>View My Courses
+          </a>
+          <a class="btn btn-outline-light" href="{{ url_for('python_page') }}">
+            <i class="bi bi-code-slash me-1"></i>Python Resources
+          </a>
+          <a class="btn btn-outline-light" href="https://www.csustan.edu/people/ms-mari-johal" target="_blank">
+            <i class="bi bi-building me-1"></i>CSU Profile
+          </a>
+        </div>
+      </div>
+      <div class="col-lg-4 order-1 order-lg-2 text-center">
+        <img
+          class="hero-photo"
+          src="{{ url_for('static', filename='img/headshot.jpg') }}"
+          alt="Maricruz (Cruz) Johal, Python Lecturer at CSU Stanislaus"
+        >
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FALL 2026 ALERT -->
+<div class="container mt-4">
+  <div class="alert-fall d-flex align-items-start gap-3">
+    <span style="font-size:1.5rem;">📅</span>
+    <div>
+      <strong class="text-dark">Fall 2026 — Now Enrolling!</strong>
+      <span class="text-secondary ms-1">
+        Intro to Python Programming is offered this semester at CSU Stanislaus.
+        Visit the <a href="{{ url_for('teaching') }}" class="fw-semibold">Teaching page</a> for syllabus and resources.
+      </span>
+    </div>
+  </div>
+</div>
+
+<!-- STATS BAR -->
+<div class="stats-bar mt-4">
+  <div class="container">
+    <div class="row text-center g-4">
+      <div class="col-6 col-md-3">
+        <div class="stat-num">27</div>
+        <div class="stat-lbl">Years in Industry</div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="stat-num">3</div>
+        <div class="stat-lbl">Courses Taught</div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="stat-num">4+</div>
+        <div class="stat-lbl">Years Lecturing</div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="stat-num">5</div>
+        <div class="stat-lbl">Certifications</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <div class="eyebrow">About Cruz</div>
+      <h2 class="brand-serif">From Senior Engineer to Educator</h2>
+      <p class="text-muted mx-auto" style="max-width:560px;">
+        I spent 27 years solving real problems in telecommunications and utilities.
+        In 2022, I traded the daily stand-up for the lecture hall — and I love every minute of it.
+      </p>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-3">
+        <div class="card h-100 shadow-sm border-0">
+          <div class="card-body">
+            <div class="fs-2 mb-2">💼</div>
+            <span class="badge bg-secondary mb-2">Industry</span>
+            <h5 class="card-title">27 Years in the Field</h5>
+            <p class="card-text text-muted small">Senior Software Engineer at Turlock Irrigation District (1999–2023) and Programmer Analyst at Evans Telephone Company.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="card h-100 shadow-sm border-0">
+          <div class="card-body">
+            <div class="fs-2 mb-2">🏛️</div>
+            <span class="badge bg-info mb-2">Teaching</span>
+            <h5 class="card-title">Lecturer at CSU Stanislaus</h5>
+            <p class="card-text text-muted small">Teaching since Fall 2022 — Intro Python, Advanced Python, and Intro to CIS — both online and on-campus via Canvas LMS.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="card h-100 shadow-sm border-0">
+          <div class="card-body">
+            <div class="fs-2 mb-2">🤖</div>
+            <span class="badge bg-warning text-dark mb-2">AI &amp; Tech</span>
+            <h5 class="card-title">AI-Informed Curriculum</h5>
+            <p class="card-text text-muted small">Certified in AI Tools for Teaching (2024). I weave generative AI and Python automation into every course so students are ready for what's next.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="card h-100 shadow-sm border-0">
+          <div class="card-body">
+            <div class="fs-2 mb-2">🎓</div>
+            <span class="badge bg-primary mb-2">Education</span>
+            <h5 class="card-title">MBA + BS, CSU Stanislaus Alum</h5>
+            <p class="card-text text-muted small">MBA in Technology Management (University of Phoenix, 2005) and BS in Business Information Systems from CSU Stanislaus (1996).</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CERTIFICATIONS & BADGES -->
+    <div class="mt-5">
+      <div class="text-center mb-4">
+        <div class="eyebrow">Credentials</div>
+        <h3 class="brand-serif">Certifications &amp; Badges</h3>
+      </div>
+
+      <!-- Credly Embedded Badges -->
+      <div class="credly-wrap justify-content-center mb-4">
+        <div
+          data-iframe-width="150"
+          data-iframe-height="270"
+          data-share-badge-id="e46ca6c5-5fa7-42d3-8b98-3fc83235bd8e"
+          data-share-badge-host="https://www.credly.com">
+        </div>
+        <div
+          data-iframe-width="150"
+          data-iframe-height="270"
+          data-share-badge-id="c7a06b91-addb-4e4f-8e62-e6b251caddb7"
+          data-share-badge-host="https://www.credly.com">
+        </div>
+      </div>
+
+      <!-- Google Data Analytics Certificate Image -->
+      <div class="row align-items-center g-4 mt-2">
+        <div class="col-md-5 text-center">
+          <a class="cert-img-link" href="https://coursera.org/share/e76ae85234a8688b582dc1ca51d616e1" target="_blank" rel="noopener" title="View Google Data Analytics Certificate on Coursera">
+            <img
+              src="{{ url_for('static', filename='img/google_analytics_cert.png') }}"
+              alt="Google Data Analytics Professional Certificate — Maricruz Johal, Coursera, Nov 2023"
+            >
+          </a>
+        </div>
+        <div class="col-md-7">
+          <div class="eyebrow">Google / Coursera</div>
+          <h4 class="brand-serif">Google Data Analytics Professional Certificate</h4>
+          <p class="text-muted">Completed November 14, 2023 — an 8-course program developed by Google covering data preparation, processing, analysis, and visualization using spreadsheets, SQL, Tableau, and R.</p>
+          <p class="text-muted">
+            <i class="bi bi-bar-chart-fill text-primary me-1"></i>
+            <em>Currently pursuing the <strong>Advanced Google Data Analytics</strong> certificate.</em>
+          </p>
+          <a class="btn btn-outline-primary btn-sm" href="https://coursera.org/share/e76ae85234a8688b582dc1ca51d616e1" target="_blank">
+            <i class="bi bi-patch-check me-1"></i>Verify Certificate
+          </a>
+        </div>
+      </div>
+
+      <!-- Text cert badges -->
+      <div class="d-flex flex-wrap justify-content-center gap-2 mt-4">
+        <span class="cert-badge"><i class="bi bi-award text-primary"></i> PCAP-31-03 — Certified Associate Python Programmer (Apr 2026)</span>
+        <span class="cert-badge"><i class="bi bi-award text-primary"></i> PCEP-30-02 — Certified Entry-Level Python Programmer (Feb 2026)</span>
+        <span class="cert-badge"><i class="bi bi-award text-primary"></i> AI Tools for Teaching &amp; Learning (Apr 2024)</span>
+        <span class="cert-badge"><i class="bi bi-award text-primary"></i> CSU Advanced QLT Online Teaching (Nov 2023)</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUICK LINKS -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-4">
+      <div class="eyebrow">Explore</div>
+      <h3 class="brand-serif">Quick Links for Students</h3>
+    </div>
+    <ul class="resource-list">
+      <li><a href="{{ url_for('python_page') }}"><i class="bi bi-snake text-success"></i> Python Resources — starter guides, cheat sheets, and tutorials</a></li>
+      <li><a href="{{ url_for('python_page') }}#git"><i class="bi bi-git text-warning"></i> Git &amp; GitHub — version control essentials for class projects</a></li>
+      <li><a href="{{ url_for('python_page') }}#codecheck"><i class="bi bi-check2-circle text-success"></i> CodeCheck Labs — practice Python with instant feedback</a></li>
+      <li><a href="{{ url_for('python_page') }}#regex"><i class="bi bi-braces text-info"></i> Regex Cheat Sheet — pattern matching reference</a></li>
+      <li><a href="{{ url_for('blog') }}"><i class="bi bi-pencil-square text-primary"></i> Blog — AI trends, Python tips, and career advice</a></li>
+      <li><a href="{{ url_for('contact') }}"><i class="bi bi-envelope text-secondary"></i> Contact — questions are always welcome</a></li>
+    </ul>
+  </div>
+</section>
+
+{% endblock %}
+
+{% block extra_js %}
+<!-- Credly badge embed script -->
+<script type="text/javascript" async src="https://cdn.credly.com/assets/utilities/embed.js"></script>
+{% endblock %}

@@ -1,0 +1,203 @@
+{% extends "base.html" %}
+{% block title %}Teaching — Cruz Johal{% endblock %}
+{% block meta_desc %}Courses taught by Cruz Johal at CSU Stanislaus: Intro Python, Advanced Python, Intro to CIS.{% endblock %}
+
+{% block content %}
+
+<div class="page-header">
+  <div class="container">
+    <h1>Teaching</h1>
+    <p>Courses, curriculum philosophy, education, and certifications</p>
+  </div>
+</div>
+
+<div class="container mt-4">
+  <div class="alert-fall d-flex align-items-start gap-3">
+    <span style="font-size:1.4rem;">📅</span>
+    <div>
+      <strong>Fall 2026 — Intro to Python Programming is scheduled!</strong>
+      <span class="text-secondary ms-1">Check Canvas for the full syllabus, labs, and schedule.</span>
+    </div>
+  </div>
+</div>
+
+<!-- COURSES -->
+<section class="py-5">
+  <div class="container">
+    <div class="text-center mb-4">
+      <div class="eyebrow">Courses</div>
+      <h2 class="brand-serif">What I Teach at CSU Stanislaus</h2>
+      <p class="text-muted">All courses blend hands-on programming, real-world context, and modern AI tools.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0">
+          <div class="card-header bg-success text-white">
+            <span class="badge bg-warning text-dark me-2">Fall 2026 — Active</span>
+          </div>
+          <div class="card-body">
+            <div class="fs-2 mb-2">🐍</div>
+            <h5 class="card-title brand-serif">Intro to Python Programming</h5>
+            <p class="card-text text-muted small">Variables, data types, control flow, functions, and file I/O. No prior experience needed. Projects use real datasets and CodeCheck.io labs for immediate feedback.</p>
+            <a class="btn btn-primary btn-sm" href="{{ url_for('python_page') }}">Student Resources →</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0">
+          <div class="card-header bg-secondary text-white">
+            <span class="badge bg-light text-dark">Previous Semesters</span>
+          </div>
+          <div class="card-body">
+            <div class="fs-2 mb-2">⚙️</div>
+            <h5 class="card-title brand-serif">Advanced Python Programming</h5>
+            <p class="card-text text-muted small">OOP, file handling, APIs, regular expressions, data structures, and intro to data analysis with Pandas. Students build full mini-projects.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0">
+          <div class="card-header bg-secondary text-white">
+            <span class="badge bg-light text-dark">Previous Semesters</span>
+          </div>
+          <div class="card-body">
+            <div class="fs-2 mb-2">💻</div>
+            <h5 class="card-title brand-serif">Intro to Computer Information Systems</h5>
+            <p class="card-text text-muted small">Practical Microsoft Office skills, data organization, business problem-solving, and an overview of how technology shapes modern organizations.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEACHING APPROACH -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-4">
+      <div class="eyebrow">Philosophy</div>
+      <h2 class="brand-serif">How I Teach</h2>
+    </div>
+    <div class="row g-4">
+      <div class="col-sm-6 col-lg-3">
+        <div class="card h-100 border-0 shadow-sm text-center p-3">
+          <div class="fs-1">🛠️</div>
+          <h6 class="mt-2 fw-bold">Hands-On Labs</h6>
+          <p class="small text-muted">CodeCheck.io gives instant automated feedback so students know right away if their code works.</p>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-3">
+        <div class="card h-100 border-0 shadow-sm text-center p-3">
+          <div class="fs-1">🎬</div>
+          <h6 class="mt-2 fw-bold">Video Lectures</h6>
+          <p class="small text-muted">High-quality video created with Camtasia and hosted on Panopto, with captions and accessibility features.</p>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-3">
+        <div class="card h-100 border-0 shadow-sm text-center p-3">
+          <div class="fs-1">🌐</div>
+          <h6 class="mt-2 fw-bold">Online &amp; On-Campus</h6>
+          <p class="small text-muted">Canvas LMS hosts all materials, discussions, assignments, and grades in one place.</p>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-3">
+        <div class="card h-100 border-0 shadow-sm text-center p-3">
+          <div class="fs-1">🤖</div>
+          <h6 class="mt-2 fw-bold">AI-Integrated</h6>
+          <p class="small text-muted">Students learn to use AI tools responsibly alongside traditional coding skills — how modern engineers actually work.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section class="py-5" style="background:linear-gradient(135deg,#3a6186,#2c4a6e);color:#fff;">
+  <div class="container">
+    <div class="text-center mb-4">
+      <div class="eyebrow" style="color:#f0ad4e;">Credentials</div>
+      <h2 class="brand-serif text-white">Certifications</h2>
+    </div>
+
+    <!-- Google Data Analytics Certificate -->
+    <div class="row align-items-center g-4 mb-4">
+      <div class="col-md-5 text-center">
+        <a class="cert-img-link" href="https://coursera.org/share/e76ae85234a8688b582dc1ca51d616e1" target="_blank">
+          <img src="{{ url_for('static', filename='img/google_analytics_cert.png') }}"
+               alt="Google Data Analytics Professional Certificate" style="max-width:340px;">
+        </a>
+      </div>
+      <div class="col-md-7">
+        <h4 class="brand-serif text-white">Google Data Analytics Professional Certificate</h4>
+        <p class="text-white-75 mb-1">Issued November 14, 2023 via Coursera &middot; 8-course Google program</p>
+        <p class="text-white-50 small mb-3">Covers data preparation, SQL, Tableau, R, and data-driven decision making.</p>
+        <p class="text-white-75 small mb-3">
+          <i class="bi bi-bar-chart-fill text-warning me-1"></i>
+          <em>Currently pursuing: <strong class="text-warning">Advanced Google Data Analytics</strong></em>
+        </p>
+        <a class="btn btn-warning text-dark btn-sm" href="https://coursera.org/share/e76ae85234a8688b582dc1ca51d616e1" target="_blank">
+          <i class="bi bi-patch-check me-1"></i>Verify on Coursera
+        </a>
+      </div>
+    </div>
+
+    <!-- Credly Badges -->
+    <div class="text-center mb-3">
+      <div class="eyebrow" style="color:#f0ad4e;">Python Institute Badges</div>
+    </div>
+    <div class="credly-wrap justify-content-center mb-4">
+      <div data-iframe-width="150" data-iframe-height="270"
+           data-share-badge-id="e46ca6c5-5fa7-42d3-8b98-3fc83235bd8e"
+           data-share-badge-host="https://www.credly.com"></div>
+      <div data-iframe-width="150" data-iframe-height="270"
+           data-share-badge-id="c7a06b91-addb-4e4f-8e62-e6b251caddb7"
+           data-share-badge-host="https://www.credly.com"></div>
+    </div>
+
+    <!-- Text cert list -->
+    <div class="d-flex flex-wrap justify-content-center gap-2">
+      <span class="cert-badge"><i class="bi bi-award text-primary"></i> PCAP-31-03 Certified Associate Python Programmer (Apr 2026)</span>
+      <span class="cert-badge"><i class="bi bi-award text-primary"></i> PCEP-30-02 Certified Entry-Level Python Programmer (Feb 2026)</span>
+      <span class="cert-badge"><i class="bi bi-award text-primary"></i> AI Tools for Teaching &amp; Learning (Apr 2024)</span>
+      <span class="cert-badge"><i class="bi bi-award text-primary"></i> CSU Advanced QLT Online Teaching (Nov 2023)</span>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section class="py-5">
+  <div class="container">
+    <div class="text-center mb-4">
+      <div class="eyebrow">Education</div>
+      <h2 class="brand-serif">Academic Background</h2>
+    </div>
+    <div class="row g-4 justify-content-center">
+      <div class="col-md-5">
+        <div class="card shadow-sm border-0 h-100">
+          <div class="card-body">
+            <div class="fs-2 mb-2">🎓</div>
+            <h5 class="brand-serif">MBA — Technology Management</h5>
+            <p class="text-muted small mb-1">University of Phoenix &middot; October 2005</p>
+            <p class="text-muted small">Focused on the intersection of business strategy and information technology.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div class="card shadow-sm border-0 h-100">
+          <div class="card-body">
+            <div class="fs-2 mb-2">🏛️</div>
+            <h5 class="brand-serif">BS — Business Information Systems</h5>
+            <p class="text-muted small mb-1">California State University, Stanislaus &middot; May 1996</p>
+            <p class="text-muted small">Foundation in programming, systems analysis, and business processes.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
+
+{% block extra_js %}
+<script type="text/javascript" async src="https://cdn.credly.com/assets/utilities/embed.js"></script>
+{% endblock %}

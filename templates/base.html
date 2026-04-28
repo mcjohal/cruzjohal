@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}Cruz Johal — Python Lecturer{% endblock %}</title>
+  <meta name="description" content="{% block meta_desc %}Maricruz Johal — Python Lecturer at CSU Stanislaus, 27-year software engineering veteran.{% endblock %}">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.2/dist/spacelab/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top shadow-sm">
+  <div class="container">
+    <a class="navbar-brand" href="{{ url_for('home') }}">
+      <span class="brand-serif">Cruz Johal</span>
+      <small class="text-warning ms-2 brand-tagline">MBA &middot; Lecturer</small>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link {% if request.endpoint=='home' %}active{% endif %}" href="{{ url_for('home') }}">Home</a></li>
+        <li class="nav-item"><a class="nav-link {% if request.endpoint=='teaching' %}active{% endif %}" href="{{ url_for('teaching') }}">Teaching</a></li>
+        <li class="nav-item"><a class="nav-link {% if request.endpoint=='python_page' %}active{% endif %}" href="{{ url_for('python_page') }}">Python</a></li>
+        <li class="nav-item"><a class="nav-link {% if request.endpoint in ['blog','post'] %}active{% endif %}" href="{{ url_for('blog') }}">Blog</a></li>
+        <li class="nav-item"><a class="nav-link {% if request.endpoint=='contact' %}active{% endif %}" href="{{ url_for('contact') }}">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+{% block content %}{% endblock %}
+
+<footer class="bg-primary text-white mt-5 py-4">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6 mb-3 mb-md-0">
+        <div class="brand-serif fs-5">Cruz Johal</div>
+        <div class="text-white-50 small">Python Lecturer &middot; CSU Stanislaus</div>
+      </div>
+      <div class="col-md-6 text-md-end">
+        <a href="https://www.linkedin.com/in/maricruz-johal/" class="text-white-50 me-3" target="_blank" title="LinkedIn"><i class="bi bi-linkedin fs-5"></i></a>
+        <a href="mailto:mjohal4@csustan.edu" class="text-white-50 me-3" title="Email"><i class="bi bi-envelope fs-5"></i></a>
+        <a href="https://www.csustan.edu/people/ms-mari-johal" class="text-white-50" target="_blank" title="CSU Profile"><i class="bi bi-building fs-5"></i></a>
+      </div>
+    </div>
+    <hr class="border-secondary my-3">
+    <div class="text-white-50 text-center small">&copy; 2026 Maricruz (Cruz) Johal &middot; Built with Flask &amp; Bootstrap Spacelab &middot; Deployed on Render.com</div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+{% block extra_js %}{% endblock %}
+</body>
+</html>

@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+{% block title %}Contact — Cruz Johal{% endblock %}
+
+{% block content %}
+
+<div class="page-header">
+  <div class="container">
+    <h1>Contact</h1>
+    <p>Questions, office hours, or just want to connect — reach out anytime.</p>
+  </div>
+</div>
+
+<section class="py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <div class="eyebrow">Get in Touch</div>
+      <h2 class="brand-serif">I'd Love to Hear From You</h2>
+      <p class="text-muted mx-auto" style="max-width:500px;">Whether you're a current student, prospective student, or fellow educator — feel free to reach out through any of the channels below.</p>
+    </div>
+
+    <div class="row g-4 justify-content-center">
+      <div class="col-sm-6 col-lg-3">
+        <div class="card h-100 shadow-sm border-0 text-center p-3">
+          <div class="fs-1 mb-2">✉️</div>
+          <h5 class="brand-serif">CSU Email</h5>
+          <p class="text-muted small">Best for course questions. I respond within 48 hours during the semester.</p>
+          <a class="btn btn-primary btn-sm" href="mailto:mjohal4@csustan.edu">mjohal4@csustan.edu</a>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-3">
+        <div class="card h-100 shadow-sm border-0 text-center p-3">
+          <div class="fs-1 mb-2">📬</div>
+          <h5 class="brand-serif">Personal Email</h5>
+          <p class="text-muted small">General inquiries, collaborations, or professional questions.</p>
+          <a class="btn btn-outline-primary btn-sm" href="mailto:cruzjohal@gmail.com">cruzjohal@gmail.com</a>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-3">
+        <div class="card h-100 shadow-sm border-0 text-center p-3">
+          <div class="fs-1 mb-2">🔗</div>
+          <h5 class="brand-serif">LinkedIn</h5>
+          <p class="text-muted small">Connect professionally and follow my teaching and tech commentary.</p>
+          <a class="btn btn-outline-primary btn-sm" href="https://www.linkedin.com/in/maricruz-johal/" target="_blank">View Profile</a>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-3">
+        <div class="card h-100 shadow-sm border-0 text-center p-3">
+          <div class="fs-1 mb-2">🏛️</div>
+          <h5 class="brand-serif">CSU Stanislaus</h5>
+          <p class="text-muted small">My official university profile — office location, department info, and more.</p>
+          <a class="btn btn-outline-secondary btn-sm" href="https://www.csustan.edu/people/ms-mari-johal" target="_blank">View Profile</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Resume download -->
+    <div class="text-center mt-5">
+      <div class="card shadow-sm border-0 d-inline-block p-4">
+        <div class="fs-1 mb-2">📄</div>
+        <h5 class="brand-serif mb-1">Download My Resume</h5>
+        <p class="text-muted small mb-3">Full CV including industry experience, teaching history, and certifications.</p>
+        <a class="btn btn-warning text-dark fw-semibold"
+           href="{{ url_for('static', filename='resume/Maricruz_Johal_Resume_2026.pdf') }}"
+           download>
+          <i class="bi bi-download me-1"></i>Download Resume (PDF)
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+{% endblock %}
