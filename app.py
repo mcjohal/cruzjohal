@@ -35,6 +35,10 @@ def teaching():
 def python_page():
     return render_template("python.html")
 
+@app.route("/python/resources")
+def python_resources():
+    return render_template("resources.html")
+
 @app.route("/blog")
 def blog():
     return render_template("blog.html", posts=get_posts())
@@ -47,6 +51,10 @@ def post(slug):
     with open(path) as f:
         content = markdown2.markdown(f.read(), extras=["fenced-code-blocks","tables"])
     return render_template("post.html", content=content, slug=slug)
+
+@app.route("/claude")
+def claude_page():
+    return render_template("claude.html")
 
 @app.route("/contact")
 def contact():

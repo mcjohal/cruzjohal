@@ -15,15 +15,15 @@
           Maricruz (Cruz) Johal, <em class="text-warning fst-normal">MBA</em>
         </h1>
         <p class="lead text-white-75 mb-4" style="color:rgba(255,255,255,.8);">
-          27 years in the software industry — now empowering students at
-          <strong class="text-white">CSU Stanislaus</strong> with real-world
-          Python skills, AI literacy, and the confidence to build things that matter.
+          After 27 years writing software in telecommunications and utilities,
+          I made the switch to teaching in 2022. I get to share what actually works
+          with students at <strong class="text-white">CSU Stanislaus</strong> and honestly, it's the best career move I've ever made.
         </p>
         <div class="d-flex flex-wrap gap-2">
           <a class="btn btn-warning text-dark fw-semibold" href="{{ url_for('teaching') }}">
             <i class="bi bi-mortarboard me-1"></i>View My Courses
           </a>
-          <a class="btn btn-outline-light" href="{{ url_for('python_page') }}">
+          <a class="btn btn-outline-light" href="{{ url_for('python_resources') }}">
             <i class="bi bi-code-slash me-1"></i>Python Resources
           </a>
           <a class="btn btn-outline-light" href="https://www.csustan.edu/people/ms-mari-johal" target="_blank">
@@ -86,9 +86,10 @@
     <div class="text-center mb-5">
       <div class="eyebrow">About Cruz</div>
       <h2 class="brand-serif">From Senior Engineer to Educator</h2>
-      <p class="text-muted mx-auto" style="max-width:560px;">
-        I spent 27 years solving real problems in telecommunications and utilities.
-        In 2022, I traded the daily stand-up for the lecture hall — and I love every minute of it.
+      <p class="text-muted mx-auto" style="max-width:700px;">
+        I spent 27 years solving real problems in telecommunications and utilities and I did it here, in the Central Valley, where I've lived and worked since I was 18.
+
+The people who built Modesto Junior College, CSU Stanislaus, Turlock Irrigation District, and this community didn't do it for recognition. They did it because they believed in something worth building. I've been a direct beneficiary of that work my entire adult life. This is my way of paying it forward.
       </p>
     </div>
 
@@ -134,9 +135,13 @@
         </div>
       </div>
     </div>
+  </div>
+</section>
 
-    <!-- CERTIFICATIONS & BADGES -->
-    <div class="mt-5">
+<!-- CERTIFICATIONS & BADGES -->
+<section class="py-5">
+  <div class="container">
+    <div class="p-4 p-md-5 rounded-4 shadow-lg" style="background:#fff;">
       <div class="text-center mb-4">
         <div class="eyebrow">Credentials</div>
         <h3 class="brand-serif">Certifications &amp; Badges</h3>
@@ -165,6 +170,7 @@
             <img
               src="{{ url_for('static', filename='img/google_analytics_cert.png') }}"
               alt="Google Data Analytics Professional Certificate — Maricruz Johal, Coursera, Nov 2023"
+              width="300"
             >
           </a>
         </div>
@@ -202,6 +208,27 @@
           </a>
         </div>
       </div>
+       <!-- Claude Code 101 Certificate -->
+      <div class="row align-items-center g-4 mt-4">
+        <div class="col-md-5 text-center">
+          <a class="cert-img-link" href="https://verify.skilljar.com/c/j2p2iukfxdmy" target="_blank" rel="noopener" title="Verify Claude Code 101 Certificate of Completion">
+            <img
+              src="{{ url_for('static', filename='img/ClaudeCode101_cert.png') }}"
+              alt="Claude Code 101 Certificate of Completion — Maricruz Johal, Anthropic, May 2026"
+              width="300"
+            >
+          </a>
+        </div>
+        <div class="col-md-7">
+          <div class="eyebrow">Anthropic</div>
+          <h4 class="brand-serif">Claude Code 101 — Certificate of Completion</h4>
+          <p class="text-muted">Issued May 12, 2026 — Completed the Claude Code 101 course by Anthropic, covering skills for using Claude Code effectively in development workflow.</p>
+          <p class="text-muted small text-monospace">Certificate No: j2p2iukfxdmy</p>
+          <a class="btn btn-outline-primary btn-sm" href="https://verify.skilljar.com/c/j2p2iukfxdmy" target="_blank">
+            <i class="bi bi-patch-check me-1"></i>Verify Certificate
+          </a>
+        </div>
+      </div>
 
       <!-- Text cert badges -->
       <div class="d-flex flex-wrap justify-content-center gap-2 mt-4">
@@ -214,22 +241,28 @@
   </div>
 </section>
 
-<!-- QUICK LINKS -->
-<section class="py-5 bg-light">
-  <div class="container">
-    <div class="text-center mb-4">
-      <div class="eyebrow">Explore</div>
-      <h3 class="brand-serif">Quick Links for Students</h3>
+  <!-- CORE COMPETENCIES -->
+<section class="bg-secondary">
+    <div class="py-5">
+      <div class="text-center">
+        <div class="eyebrow">Skills</div>
+        <h3 class="brand-serif">Core Competencies</h3>
+      </div>
+      <div class="d-flex flex-wrap justify-content-center gap-2 p ">
+        <span class="badge rounded-pill bg-light text-dark border px-3 py-2">Python Programming (Intro &amp; Advanced)</span>
+        <span class="badge rounded-pill bg-light text-dark border px-3 py-2">Software Application Development</span>
+        <span class="badge rounded-pill bg-light text-dark border px-3 py-2">Online &amp; Hybrid Instruction</span>
+        <span class="badge rounded-pill bg-light text-dark border px-3 py-2">Curriculum &amp; Course Design</span>
+        <span class="badge rounded-pill bg-light text-dark border px-3 py-2">Canvas LMS Administration</span>
+        <span class="badge rounded-pill bg-light text-dark border px-3 py-2">AI Tools Integration</span>
+        <span class="badge rounded-pill bg-light text-dark border px-3 py-2">Data Analytics (SQL, Tableau, R)</span>
+        <span class="badge rounded-pill bg-light text-dark border px-3 py-2">Agile / SDLC Methodologies</span>
+        <span class="badge rounded-pill bg-light text-dark border px-3 py-2">Student Mentorship &amp; Advising</span>
+        <span class="badge rounded-pill bg-light text-dark border px-3 py-2">Enterprise Systems Engineering</span>
+        <span class="badge rounded-pill bg-light text-dark border px-3 py-2">CodeCheck.io &amp; Pearson MyLab</span>
+        <span class="badge rounded-pill bg-light text-dark border px-3 py-2">Technical Video Production</span>
+      </div>
     </div>
-    <ul class="resource-list">
-      <li><a href="{{ url_for('python_page') }}"><i class="bi bi-snake text-success"></i> Python Resources — starter guides, cheat sheets, and tutorials</a></li>
-      <li><a href="{{ url_for('python_page') }}#git"><i class="bi bi-git text-warning"></i> Git &amp; GitHub — version control essentials for class projects</a></li>
-      <li><a href="{{ url_for('python_page') }}#codecheck"><i class="bi bi-check2-circle text-success"></i> CodeCheck Labs — practice Python with instant feedback</a></li>
-      <li><a href="{{ url_for('python_page') }}#regex"><i class="bi bi-braces text-info"></i> Regex Cheat Sheet — pattern matching reference</a></li>
-      <li><a href="{{ url_for('blog') }}"><i class="bi bi-pencil-square text-primary"></i> Blog — AI trends, Python tips, and career advice</a></li>
-      <li><a href="{{ url_for('contact') }}"><i class="bi bi-envelope text-secondary"></i> Contact — questions are always welcome</a></li>
-    </ul>
-  </div>
 </section>
 
 {% endblock %}

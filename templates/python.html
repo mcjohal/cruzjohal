@@ -1,139 +1,392 @@
 {% extends "base.html" %}
-{% block title %}Python Resources — Cruz Johal{% endblock %}
+{% block title %}Python — Cruz Johal{% endblock %}
+{% block meta_desc %}Learn about Python — what it is, who built it, the most important libraries, which industries rely on it, and why it remains essential in the age of AI.{% endblock %}
 
 {% block content %}
+
+<!-- HERO -->
 <div class="page-header">
   <div class="container">
-    <h1>Python Resources</h1>
-    <p>Everything you need for Intro and Advanced Python at CSU Stanislaus</p>
+    <span class="badge bg-warning text-dark mb-3" style="font-size:.75rem;letter-spacing:.06em;">The World's Most Popular Language</span>
+    <h1 class="brand-serif">Python</h1>
+    <p class="lead" style="color:rgba(255,255,255,.85);max-width:680px;">
+      Simple enough to teach on day one. Powerful enough to run Netflix, power NASA simulations, and train the AI models reshaping every industry.
+    </p>
+    <a href="{{ url_for('python_resources') }}" class="btn btn-warning text-dark fw-semibold mt-2">
+      <i class="bi bi-journal-code me-1"></i>Go to Course Resources
+    </a>
   </div>
 </div>
 
+<!-- WHAT IS PYTHON -->
 <section class="py-5">
   <div class="container">
-
-    <!-- GETTING STARTED -->
-    <div class="mb-5" id="resources">
-      <div class="eyebrow">Getting Started</div>
-      <h3 class="brand-serif mb-3">Python Essentials</h3>
-      <ul class="resource-list">
-        <li><a href="https://www.python.org/downloads/" target="_blank"><i class="bi bi-download text-success"></i> Download Python — official python.org installer</a></li>
-        <li><a href="https://code.visualstudio.com/" target="_blank"><i class="bi bi-code-square text-primary"></i> VS Code — recommended code editor</a></li>
-        <li><a href="https://docs.python.org/3/tutorial/" target="_blank"><i class="bi bi-book text-info"></i> Official Python Tutorial — from python.org</a></li>
-        <li><a href="https://repl.it/" target="_blank"><i class="bi bi-cloud text-secondary"></i> Replit — run Python in the browser (no install needed)</a></li>
-      </ul>
-    </div>
-
-    <!-- GIT -->
-    <div class="mb-5" id="git">
-      <div class="eyebrow">Version Control</div>
-      <h3 class="brand-serif mb-1">Git &amp; GitHub</h3>
-      <p class="text-muted mb-3">Every software engineer uses Git. These resources get you started with version control so you can track changes, collaborate, and build a portfolio.</p>
-      <ul class="resource-list mb-3">
-        <li><a href="https://git-scm.com/downloads" target="_blank"><i class="bi bi-download text-warning"></i> Install Git — git-scm.com</a></li>
-        <li><a href="https://github.com" target="_blank"><i class="bi bi-github text-dark"></i> GitHub — create a free account</a></li>
-        <li><a href="https://docs.github.com/en/get-started/quickstart" target="_blank"><i class="bi bi-rocket text-primary"></i> GitHub Quickstart Guide</a></li>
-        <li><a href="https://education.github.com/students" target="_blank"><i class="bi bi-mortarboard text-success"></i> GitHub Student Developer Pack — free tools for students</a></li>
-      </ul>
-      <div class="code-dark">
-        <code>git init                   # start a new repo
-git clone &lt;url&gt;            # copy a repo from GitHub
-git status                 # see what's changed
-git add .                  # stage all changes
-git commit -m "message"    # save a snapshot
-git push origin main       # push to GitHub
-git pull                   # get latest from remote
-git branch feature-name    # create a new branch</code>
+    <div class="row align-items-center g-5">
+      <div class="col-lg-7">
+        <div class="eyebrow">Overview</div>
+        <h2 class="brand-serif">What is Python?</h2>
+        <p class="text-muted">
+          Python is a high-level, general-purpose programming language designed for readability and simplicity. Code written in Python looks almost like plain English — there are no curly braces, no mandatory semicolons, and indentation is part of the syntax, not decoration. That philosophy makes it the fastest language to learn and one of the fastest to prototype in.
+        </p>
+        <p class="text-muted">
+          Python is <strong>interpreted</strong>, meaning you can run a script immediately without a separate compilation step. It is also <strong>dynamically typed</strong>, so you don't declare variable types upfront. Combine that with an enormous standard library and the world's largest ecosystem of third-party packages and you have a language that scales from a 10-line script to a million-line enterprise application.
+        </p>
+        <div class="code-dark mt-3">
+          <code># Python in three lines
+names = ["Cruz", "Alice", "Bob"]
+for name in names:
+    print(f"Hello, {name}!")</code>
+        </div>
+      </div>
+      <div class="col-lg-5">
+        <div class="card border-0 shadow-sm h-100">
+          <div class="card-body p-4">
+            <h5 class="brand-serif mb-3">At a Glance</h5>
+            <ul class="list-unstyled mb-0" style="line-height:2;">
+              <li><i class="bi bi-calendar3 text-primary me-2"></i><strong>First released:</strong> 1991</li>
+              <li><i class="bi bi-person text-primary me-2"></i><strong>Creator:</strong> Guido van Rossum</li>
+              <li><i class="bi bi-code-slash text-primary me-2"></i><strong>Paradigm:</strong> Multi-paradigm (OOP, procedural, functional)</li>
+              <li><i class="bi bi-translate text-primary me-2"></i><strong>Typing:</strong> Dynamic, strongly typed</li>
+              <li><i class="bi bi-globe text-primary me-2"></i><strong>License:</strong> Open source (PSF License)</li>
+              <li><i class="bi bi-trophy text-primary me-2"></i><strong>Current version:</strong> Python 3.x</li>
+              <li><i class="bi bi-bar-chart-fill text-primary me-2"></i><strong>Popularity:</strong> #1 on TIOBE Index (2024)</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
+  </div>
+</section>
 
-    <!-- CODECHECK -->
-    <div class="mb-5" id="codecheck">
-      <div class="eyebrow">Practice Labs</div>
-      <h3 class="brand-serif mb-1">CodeCheck Assignments</h3>
-      <p class="text-muted mb-3">CodeCheck.io gives you instant feedback on your code. These labs are used in class — practice them as much as you want.</p>
-      <ul class="resource-list">
-        <li><a href="https://codecheck.io/assignment/25031917088pmzfn9a9uxgr4rrdaeg25gp6" target="_blank"><i class="bi bi-check2-circle text-success"></i> Lab: print() — your first Python output</a></li>
-        <li><a href="https://codecheck.io" target="_blank"><i class="bi bi-link-45deg text-primary"></i> CodeCheck.io main site</a></li>
-      </ul>
+<!-- WHY PYTHON -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-5">
+      <div class="eyebrow">Why it Matters</div>
+      <h2 class="brand-serif">Why Python?</h2>
+      <p class="text-muted mx-auto" style="max-width:680px;">
+        Python didn't become the world's most-used language by accident. Several things compound to make it uniquely powerful.
+      </p>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body p-4">
+            <div class="fs-2 mb-2">🚀</div>
+            <h5 class="card-title">Fast to Write, Fast to Ship</h5>
+            <p class="card-text text-muted small">Python's concise syntax means you write 3–5x fewer lines than Java or C++ for the same task. Less code = fewer bugs, faster iteration, faster time to production.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body p-4">
+            <div class="fs-2 mb-2">📦</div>
+            <h5 class="card-title">Massive Ecosystem</h5>
+            <p class="card-text text-muted small">PyPI (the Python Package Index) hosts over 500,000 packages. Whatever you need — web servers, database drivers, ML frameworks, image processing — someone has already built it.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body p-4">
+            <div class="fs-2 mb-2">🤝</div>
+            <h5 class="card-title">Glue Language</h5>
+            <p class="card-text text-muted small">Python connects easily with C/C++, Java, databases, REST APIs, and cloud services. It acts as the glue between systems written in different languages — which is why it dominates data pipelines and automation.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body p-4">
+            <div class="fs-2 mb-2">📖</div>
+            <h5 class="card-title">Readable by Design</h5>
+            <p class="card-text text-muted small">Python was explicitly designed so code reads like a specification. That makes onboarding new engineers faster, code reviews more productive, and long-term maintenance significantly cheaper.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body p-4">
+            <div class="fs-2 mb-2">🌐</div>
+            <h5 class="card-title">Cross-Platform</h5>
+            <p class="card-text text-muted small">Write once, run on Windows, macOS, and Linux without modification. Python also runs in the browser via Pyodide, on microcontrollers via MicroPython, and in serverless cloud functions.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body p-4">
+            <div class="fs-2 mb-2">🎓</div>
+            <h5 class="card-title">Best First Language</h5>
+            <p class="card-text text-muted small">Python is the most-taught language at U.S. universities. It lets beginners focus on problem-solving and logic instead of wrestling with syntax — and the skills transfer directly to the workplace.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHO CREATED PYTHON -->
+<section class="py-5">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-5 text-center text-lg-start">
+        <div class="display-1 mb-3">🐍</div>
+        <div class="eyebrow">Origin</div>
+        <h2 class="brand-serif">Guido van Rossum &amp; the Python Story</h2>
+      </div>
+      <div class="col-lg-7">
+        <p class="text-muted">
+          Python was created by Dutch programmer <strong>Guido van Rossum</strong> during the Christmas holiday of 1989. Working at Centrum Wiskunde &amp; Informatica (CWI) in the Netherlands, Guido wanted a scripting language that improved on the ABC language he had worked on — one that was easy to read and didn't require the ceremony of C or shell scripts.
+        </p>
+        <p class="text-muted">
+          He named it after <em>Monty Python's Flying Circus</em>, the British comedy troupe — not the snake. The first public version (0.9.0) was released in February 1991. Python 2.0 followed in 2000 with list comprehensions and garbage collection. Python 3.0, released in 2008, was a deliberate backwards-incompatible redesign that cleaned up a decade of rough edges. The Python 2 line was retired in 2020.
+        </p>
+        <p class="text-muted">
+          Guido served as Python's <strong>Benevolent Dictator For Life (BDFL)</strong> until 2018, when he stepped back from day-to-day governance. The language is now stewarded by the <strong>Python Software Foundation (PSF)</strong> and a five-member elected Steering Council. Development happens entirely in the open on GitHub.
+        </p>
+        <div class="d-flex flex-wrap gap-2 mt-3">
+          <span class="badge bg-secondary">1989 — conceived</span>
+          <span class="badge bg-secondary">1991 — first release</span>
+          <span class="badge bg-secondary">2000 — Python 2</span>
+          <span class="badge bg-secondary">2008 — Python 3</span>
+          <span class="badge bg-secondary">2020 — Python 2 EOL</span>
+          <span class="badge bg-primary">2024 — Python 3.13</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LIBRARIES -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-5">
+      <div class="eyebrow">Ecosystem</div>
+      <h2 class="brand-serif">Python Libraries &amp; Packages</h2>
+      <p class="text-muted mx-auto" style="max-width:700px;">
+        A <strong>library</strong> (or package) is a collection of pre-written code you import into your program. Instead of reinventing the wheel, you install a package and call its functions. This is why Python developers can build in days what would take months from scratch.
+      </p>
     </div>
 
-    <!-- REGEX -->
-    <div class="mb-5" id="regex">
-      <div class="eyebrow">Reference</div>
-      <h3 class="brand-serif mb-3">Regex Cheat Sheet</h3>
-      <div class="card shadow-sm border-0">
-        <div class="card-body">
-          <div class="row g-4" style="font-size:.92rem;">
-            <div class="col-sm-6 col-lg-3">
-              <h6 class="fw-bold">Character Classes</h6>
-              <ul class="list-unstyled small">
-                <li><code>.</code> — any char except newline</li>
-                <li><code>\d</code> — digit [0-9]</li>
-                <li><code>\D</code> — non-digit</li>
-                <li><code>\w</code> — word char [a-zA-Z0-9_]</li>
-                <li><code>\W</code> — non-word char</li>
-                <li><code>\s</code> — whitespace</li>
-                <li><code>\S</code> — non-whitespace</li>
-              </ul>
-            </div>
-            <div class="col-sm-6 col-lg-3">
-              <h6 class="fw-bold">Quantifiers</h6>
-              <ul class="list-unstyled small">
-                <li><code>*</code> — 0 or more</li>
-                <li><code>+</code> — 1 or more</li>
-                <li><code>?</code> — 0 or 1 (optional)</li>
-                <li><code>{n}</code> — exactly n times</li>
-                <li><code>{n,m}</code> — between n and m</li>
-                <li><code>^</code> — start of string</li>
-                <li><code>$</code> — end of string</li>
-              </ul>
-            </div>
-            <div class="col-sm-6 col-lg-3">
-              <h6 class="fw-bold">Python re Module</h6>
-              <ul class="list-unstyled small">
-                <li><code>re.match(p, s)</code> — at start</li>
-                <li><code>re.search(p, s)</code> — anywhere</li>
-                <li><code>re.findall(p, s)</code> — all matches</li>
-                <li><code>re.sub(p, r, s)</code> — replace</li>
-                <li><code>re.compile(p)</code> — compile</li>
-              </ul>
-            </div>
-            <div class="col-sm-6 col-lg-3">
-              <h6 class="fw-bold">Groups &amp; Anchors</h6>
-              <ul class="list-unstyled small">
-                <li><code>(abc)</code> — capture group</li>
-                <li><code>(?:abc)</code> — non-capture</li>
-                <li><code>a|b</code> — a or b</li>
-                <li><code>[abc]</code> — any of a, b, c</li>
-                <li><code>[^abc]</code> — not a, b, or c</li>
-                <li><code>\b</code> — word boundary</li>
-              </ul>
-            </div>
+    <div class="row g-4 mb-4">
+      <!-- Data & Analytics -->
+      <div class="col-lg-6">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-header bg-primary text-white fw-semibold border-0">
+            <i class="bi bi-bar-chart me-2"></i>Data &amp; Analytics
+          </div>
+          <div class="card-body">
+            <ul class="list-unstyled mb-0">
+              <li class="py-2 border-bottom"><strong>NumPy</strong> <span class="badge bg-warning text-dark ms-1 small">Essential</span><br><span class="text-muted small">Fast N-dimensional arrays and mathematical operations. The foundation everything else is built on.</span></li>
+              <li class="py-2 border-bottom"><strong>Pandas</strong> <span class="badge bg-warning text-dark ms-1 small">Essential</span><br><span class="text-muted small">DataFrames for tabular data — think Excel but programmable and capable of handling millions of rows.</span></li>
+              <li class="py-2 border-bottom"><strong>Matplotlib</strong><br><span class="text-muted small">The standard plotting library. Line charts, bar charts, scatter plots, histograms — all from Python code.</span></li>
+              <li class="py-2"><strong>Seaborn</strong><br><span class="text-muted small">Beautiful statistical graphics built on top of Matplotlib with much less code.</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- AI & Machine Learning -->
+      <div class="col-lg-6">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-header bg-warning text-dark fw-semibold border-0">
+            <i class="bi bi-cpu me-2"></i>AI &amp; Machine Learning
+          </div>
+          <div class="card-body">
+            <ul class="list-unstyled mb-0">
+              <li class="py-2 border-bottom"><strong>TensorFlow</strong> <span class="badge bg-warning text-dark ms-1 small">Industry Standard</span><br><span class="text-muted small">Google's deep learning framework. Powers production ML at scale across Google, Airbnb, and thousands of companies.</span></li>
+              <li class="py-2 border-bottom"><strong>PyTorch</strong> <span class="badge bg-warning text-dark ms-1 small">Industry Standard</span><br><span class="text-muted small">Meta's deep learning library. Preferred in academic research and increasingly in production. Used to train LLaMA.</span></li>
+              <li class="py-2 border-bottom"><strong>scikit-learn</strong><br><span class="text-muted small">Classical ML algorithms (regression, classification, clustering) with a clean, consistent API.</span></li>
+              <li class="py-2"><strong>Hugging Face Transformers</strong><br><span class="text-muted small">Pre-trained language models (BERT, GPT, LLaMA) you can fine-tune or run with a few lines of Python.</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Web Development -->
+      <div class="col-lg-6">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-header bg-info text-white fw-semibold border-0">
+            <i class="bi bi-globe me-2"></i>Web Development
+          </div>
+          <div class="card-body">
+            <ul class="list-unstyled mb-0">
+              <li class="py-2 border-bottom"><strong>Django</strong> <span class="badge bg-warning text-dark ms-1 small">Full-Stack</span><br><span class="text-muted small">A "batteries included" web framework. ORM, admin panel, authentication, and routing — all built in. Used by Instagram and Pinterest.</span></li>
+              <li class="py-2 border-bottom"><strong>Flask</strong> <span class="badge bg-success text-white ms-1 small">This Site!</span><br><span class="text-muted small">Lightweight micro-framework — minimal core, extensible through plugins. Perfect for APIs and smaller web apps.</span></li>
+              <li class="py-2"><strong>FastAPI</strong><br><span class="text-muted small">Modern async API framework with automatic OpenAPI docs. Extremely fast — comparable to Node.js in benchmarks.</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Automation & Scripting -->
+      <div class="col-lg-6">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-header bg-success text-white fw-semibold border-0">
+            <i class="bi bi-gear me-2"></i>Automation &amp; Scripting
+          </div>
+          <div class="card-body">
+            <ul class="list-unstyled mb-0">
+              <li class="py-2 border-bottom"><strong>Requests</strong><br><span class="text-muted small">The simplest way to make HTTP calls. Fetching a web page or calling a REST API is a single line of code.</span></li>
+              <li class="py-2 border-bottom"><strong>Beautiful Soup</strong><br><span class="text-muted small">Parse HTML and XML to scrape data from websites — used extensively in data journalism and research.</span></li>
+              <li class="py-2 border-bottom"><strong>Selenium / Playwright</strong><br><span class="text-muted small">Control a real web browser programmatically for testing or automating complex web interactions.</span></li>
+              <li class="py-2"><strong>OpenPyXL / openpyxl</strong><br><span class="text-muted small">Read and write Excel files without opening Excel — a staple in corporate data automation workflows.</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHO USES PYTHON -->
+<section class="py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <div class="eyebrow">Adoption</div>
+      <h2 class="brand-serif">Who Uses Python &amp; Where</h2>
+      <p class="text-muted mx-auto" style="max-width:680px;">
+        Python is no longer a niche scripting language. It is used by the world's largest companies, government agencies, research institutions, and independent developers across virtually every sector.
+      </p>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body p-4">
+            <div class="fs-2 mb-2">🏥</div>
+            <h5 class="card-title">Healthcare &amp; Bioinformatics</h5>
+            <p class="card-text text-muted small">Python processes genomic data, runs clinical trial simulations, and powers imaging analysis tools. Libraries like Biopython and PySpark handle data at scales no spreadsheet can touch.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body p-4">
+            <div class="fs-2 mb-2">💰</div>
+            <h5 class="card-title">Finance &amp; FinTech</h5>
+            <p class="card-text text-muted small">Banks, hedge funds, and trading platforms use Python for quantitative analysis, algorithmic trading, fraud detection, and risk modeling. JPMorgan, Goldman Sachs, and PayPal are heavy users.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body p-4">
+            <div class="fs-2 mb-2">🚀</div>
+            <h5 class="card-title">Aerospace &amp; Government</h5>
+            <p class="card-text text-muted small">NASA uses Python for mission analysis and spacecraft software. The CIA, FBI, and NSA all list Python as a required skill. It was used to process the first image of a black hole (Event Horizon Telescope).</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body p-4">
+            <div class="fs-2 mb-2">🎬</div>
+            <h5 class="card-title">Entertainment &amp; Media</h5>
+            <p class="card-text text-muted small">Netflix's recommendation engine, Spotify's Discover Weekly, and YouTube's search ranking are all Python-driven. Industrial Light &amp; Magic uses Python for visual effects pipelines.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body p-4">
+            <div class="fs-2 mb-2">🌱</div>
+            <h5 class="card-title">Energy &amp; Utilities</h5>
+            <p class="card-text text-muted small">Utilities (including here in the Central Valley) use Python for SCADA data analysis, grid modeling, outage prediction, and automating the reporting that used to take engineers days by hand.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body p-4">
+            <div class="fs-2 mb-2">🎓</div>
+            <h5 class="card-title">Education &amp; Research</h5>
+            <p class="card-text text-muted small">Python is the language of academic computing. Every major university uses it in statistics, social science, physics, and computer science. Jupyter notebooks have replaced Excel in many research labs.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PYTHON & AI -->
+<section class="py-5" style="background: linear-gradient(135deg, #0d1b2a 0%, #1a3550 100%);">
+  <div class="container">
+    <div class="text-center mb-5">
+      <div class="eyebrow" style="color:rgba(255,215,0,.9);">The Age of AI</div>
+      <h2 class="brand-serif text-white">Why Python is More Important Than Ever</h2>
+      <p style="color:rgba(255,255,255,.75);max-width:700px;margin:0 auto;">
+        Some predicted that AI tools would make programming languages obsolete. The opposite happened. Python's importance has accelerated because AI needs Python more than Python needs AI.
+      </p>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-3">
+        <div class="card h-100 border-0" style="background:rgba(255,255,255,.08);">
+          <div class="card-body p-4 text-white">
+            <div class="fs-2 mb-2">🧠</div>
+            <h5>Python Trains the Models</h5>
+            <p class="small" style="color:rgba(255,255,255,.7);">Every major large language model — GPT-4, Claude, Gemini, LLaMA — was trained using Python. PyTorch and TensorFlow are Python-first. The entire ML research pipeline runs on Python.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="card h-100 border-0" style="background:rgba(255,255,255,.08);">
+          <div class="card-body p-4 text-white">
+            <div class="fs-2 mb-2">🔌</div>
+            <h5>Python Connects AI to Everything</h5>
+            <p class="small" style="color:rgba(255,255,255,.7);">APIs for OpenAI, Anthropic, Google Gemini, and every other AI provider have Python SDKs as their first-class client. Python is the lingua franca for integrating AI into real applications.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="card h-100 border-0" style="background:rgba(255,255,255,.08);">
+          <div class="card-body p-4 text-white">
+            <div class="fs-2 mb-2">📊</div>
+            <h5>AI Needs Data Engineers</h5>
+            <p class="small" style="color:rgba(255,255,255,.7);">AI models are only as good as the data they're trained on. The people who build and maintain data pipelines — using Pandas, Spark, and Airflow — are in higher demand than ever. All Python.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="card h-100 border-0" style="background:rgba(255,255,255,.08);">
+          <div class="card-body p-4 text-white">
+            <div class="fs-2 mb-2">⚙️</div>
+            <h5>AI Amplifies Python Devs</h5>
+            <p class="small" style="color:rgba(255,255,255,.7);">With GitHub Copilot and Claude Code, a Python developer can do 3–5x the work of one without AI assistance. Python's readability makes AI-generated code easier to review and trust — a feedback loop that rewards Python knowledge.</p>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- POINTERS -->
-    <div id="pointers">
-      <div class="eyebrow">Advanced Topic</div>
-      <h3 class="brand-serif mb-2">References &amp; Pointers in Python</h3>
-      <p class="text-muted mb-3">Python doesn't have pointers like C/C++, but it uses <em>references</em>. Every variable holds a reference to an object, not the object itself.</p>
-      <div class="code-dark">
-        <code># Both variables point to the SAME list
-a = [1, 2, 3]
-b = a          # b is a reference to the same object
-b.append(4)
-print(a)       # [1, 2, 3, 4]  ← a changed too!
-
-# Use .copy() or list() to avoid this
-c = a.copy()
-c.append(99)
-print(a)       # [1, 2, 3, 4]  ← a unchanged</code>
-      </div>
+    <div class="text-center mt-5">
+      <p class="lead text-white mb-1" style="color:rgba(255,255,255,.9) !important;">
+        Learning Python in 2026 is not a hedge against AI. <strong class="text-warning">It is how you work with it.</strong>
+      </p>
+      <p style="color:rgba(255,255,255,.6);" class="small">The students who understand the fundamentals will be the ones who can direct, audit, and extend what AI produces.</p>
     </div>
-
   </div>
 </section>
+
+<!-- CTA -->
+<section class="py-5 bg-light">
+  <div class="container text-center">
+    <div class="eyebrow">Next Steps</div>
+    <h2 class="brand-serif mb-3">Ready to Start?</h2>
+    <p class="text-muted mx-auto mb-4" style="max-width:600px;">
+      Browse the course resources I use in my Python classes at CSU Stanislaus — installers, cheat sheets, coding labs, and reference material all in one place.
+    </p>
+    <div class="d-flex flex-wrap justify-content-center gap-3">
+      <a href="{{ url_for('python_resources') }}" class="btn btn-primary btn-lg fw-semibold">
+        <i class="bi bi-journal-code me-2"></i>Python Resources
+      </a>
+      <a href="{{ url_for('teaching') }}" class="btn btn-outline-primary btn-lg">
+        <i class="bi bi-mortarboard me-2"></i>View My Courses
+      </a>
+    </div>
+  </div>
+</section>
+
 {% endblock %}

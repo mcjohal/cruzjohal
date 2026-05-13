@@ -26,8 +26,15 @@
       <ul class="navbar-nav ms-auto">
         <li class="nav-item"><a class="nav-link {% if request.endpoint=='home' %}active{% endif %}" href="{{ url_for('home') }}">Home</a></li>
         <li class="nav-item"><a class="nav-link {% if request.endpoint=='teaching' %}active{% endif %}" href="{{ url_for('teaching') }}">Teaching</a></li>
-        <li class="nav-item"><a class="nav-link {% if request.endpoint=='python_page' %}active{% endif %}" href="{{ url_for('python_page') }}">Python</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle {% if request.endpoint in ['python_page','python_resources'] %}active{% endif %}" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Python</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item {% if request.endpoint=='python_page' %}active{% endif %}" href="{{ url_for('python_page') }}">Python</a></li>
+            <li><a class="dropdown-item {% if request.endpoint=='python_resources' %}active{% endif %}" href="{{ url_for('python_resources') }}">Resources</a></li>
+          </ul>
+        </li>
         <li class="nav-item"><a class="nav-link {% if request.endpoint in ['blog','post'] %}active{% endif %}" href="{{ url_for('blog') }}">Blog</a></li>
+        <li class="nav-item"><a class="nav-link {% if request.endpoint=='claude_page' %}active{% endif %}" href="{{ url_for('claude_page') }}">Claude AI</a></li>
         <li class="nav-item"><a class="nav-link {% if request.endpoint=='contact' %}active{% endif %}" href="{{ url_for('contact') }}">Contact</a></li>
       </ul>
     </div>
@@ -36,7 +43,7 @@
 
 {% block content %}{% endblock %}
 
-<footer class="bg-primary text-white mt-5 py-4">
+<footer class="bg-primary text-white  py-4">
   <div class="container">
     <div class="row align-items-center">
       <div class="col-md-6 mb-3 mb-md-0">

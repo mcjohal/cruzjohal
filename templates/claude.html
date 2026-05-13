@@ -1,0 +1,341 @@
+{% extends "base.html" %}
+{% block title %}Claude AI — Cruz Johal{% endblock %}
+{% block meta_desc %}Learn about Claude AI and Claude Code: what they are, how they work, and key terminology for getting started.{% endblock %}
+
+{% block content %}
+
+<div class="page-header">
+  <div class="container">
+    <h1>Claude AI</h1>
+    <p>Understanding Claude AI, Claude Code, and the vocabulary that comes with them</p>
+  </div>
+</div>
+
+<!-- SECTION 1: WHAT IS CLAUDE AI -->
+<section class="py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <div class="eyebrow">Section 1</div>
+      <h2 class="brand-serif">What Is Claude AI?</h2>
+    </div>
+    <div class="row g-4 align-items-start">
+      <div class="col-lg-7">
+        <p class="lead">Claude is a family of large language models (LLMs) built by <strong>Anthropic</strong>, a safety-focused AI research company. Unlike a search engine that looks up answers, Claude <em>generates</em> responses by predicting what text is most useful given the conversation so far.</p>
+        <p>At its core, Claude is trained to be <strong>helpful, harmless, and honest</strong> — a set of values Anthropic calls Constitutional AI. This means Claude tries to give accurate, thoughtful replies while refusing requests that could cause harm.</p>
+        <p>Claude comes in several tiers, each balancing speed and capability:</p>
+        <ul class="list-unstyled">
+          <li class="mb-2"><i class="bi bi-cpu text-primary me-2"></i><strong>Haiku</strong> — fastest, lightest; great for quick tasks and high-volume use cases.</li>
+          <li class="mb-2"><i class="bi bi-cpu-fill text-primary me-2"></i><strong>Sonnet</strong> — the everyday workhorse; strong reasoning at practical speed.</li>
+          <li class="mb-2"><i class="bi bi-stars text-warning me-2"></i><strong>Opus</strong> — the most capable tier; best for complex reasoning, writing, and analysis.</li>
+        </ul>
+        <p>You can use Claude through the web at <strong>claude.ai</strong>, via the API, or embedded in third-party apps. It handles tasks ranging from drafting emails and summarizing documents to writing code, tutoring students, and analyzing data.</p>
+      </div>
+      <div class="col-lg-5">
+        <div class="card border-0 shadow-sm">
+          <div class="card-body p-4">
+            <h5 class="brand-serif mb-3"><i class="bi bi-info-circle text-primary me-2"></i>Key Facts</h5>
+            <ul class="list-unstyled mb-0">
+              <li class="mb-2"><span class="fw-bold">Developer:</span> Anthropic (founded 2021)</li>
+              <li class="mb-2"><span class="fw-bold">Type:</span> Large Language Model (LLM)</li>
+              <li class="mb-2"><span class="fw-bold">Access:</span> claude.ai, API, mobile apps</li>
+              <li class="mb-2"><span class="fw-bold">Design goal:</span> Helpful, Harmless, Honest</li>
+              <li class="mb-2"><span class="fw-bold">Current family:</span> Claude 4.x (Haiku, Sonnet, Opus)</li>
+              <li class="mb-2"><span class="fw-bold">Context window:</span> Up to 200 000 tokens</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card border-0 shadow-sm mt-3">
+          <div class="card-body p-4">
+            <h5 class="brand-serif mb-3"><i class="bi bi-lightbulb text-warning me-2"></i>What Claude Can Do</h5>
+            <div class="row g-2">
+              <div class="col-6"><span class="badge bg-primary w-100 py-2">Write &amp; edit text</span></div>
+              <div class="col-6"><span class="badge bg-primary w-100 py-2">Generate code</span></div>
+              <div class="col-6"><span class="badge bg-primary w-100 py-2">Summarize documents</span></div>
+              <div class="col-6"><span class="badge bg-primary w-100 py-2">Answer questions</span></div>
+              <div class="col-6"><span class="badge bg-primary w-100 py-2">Analyze data</span></div>
+              <div class="col-6"><span class="badge bg-primary w-100 py-2">Teach &amp; tutor</span></div>
+              <div class="col-6"><span class="badge bg-primary w-100 py-2">Brainstorm ideas</span></div>
+              <div class="col-6"><span class="badge bg-primary w-100 py-2">Debug errors</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 2: WHAT IS CLAUDE CODE -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-5">
+      <div class="eyebrow">Section 2</div>
+      <h2 class="brand-serif">What Is Claude Code?</h2>
+    </div>
+    <div class="row g-4 align-items-start">
+      <div class="col-lg-5 order-lg-2">
+        <div class="card border-0 shadow-sm">
+          <div class="card-body p-4">
+            <h5 class="brand-serif mb-3"><i class="bi bi-terminal text-success me-2"></i>How Developers Use It</h5>
+            <ol class="ps-3 mb-0">
+              <li class="mb-2">Open a terminal inside your project folder.</li>
+              <li class="mb-2">Run <code>claude</code> to start an interactive session.</li>
+              <li class="mb-2">Ask it to add a feature, fix a bug, or explain a file.</li>
+              <li class="mb-2">Review the proposed changes before they are applied.</li>
+              <li class="mb-2">Accept, modify, or reject — you stay in control.</li>
+            </ol>
+          </div>
+        </div>
+        <div class="card border-0 shadow-sm mt-3">
+          <div class="card-body p-4">
+            <h5 class="brand-serif mb-3"><i class="bi bi-tools text-secondary me-2"></i>Built-In Capabilities</h5>
+            <ul class="list-unstyled mb-0">
+              <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Read and edit files across the repo</li>
+              <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Run shell commands and tests</li>
+              <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Search the web for current info</li>
+              <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Manage git commits and branches</li>
+              <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Connect to external tools via MCP</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-7 order-lg-1">
+        <p class="lead"><strong>Claude Code</strong> is Anthropic's official command-line interface (CLI) that brings Claude's intelligence directly into a developer's terminal and code editor. Instead of switching to a chat window, you interact with Claude from inside your project.</p>
+        <p>Where the regular Claude chat is a conversation, Claude Code is an <em>agentic</em> coding assistant: it can read your entire codebase, write and modify files, run tests, execute shell commands, and propose pull requests — all in one workflow.</p>
+        <p>Claude Code is designed around a key principle: <strong>you remain in the driver's seat.</strong> Every significant action (editing a file, running a command) requires your approval unless you explicitly grant broader permissions. This keeps the human in control of the actual repository.</p>
+        <p>It integrates natively with popular editors:</p>
+        <div class="row g-3 mt-1">
+          <div class="col-sm-4">
+            <div class="card border-0 bg-white shadow-sm text-center p-3 h-100">
+              <div class="fs-2">💻</div>
+              <div class="fw-bold small mt-1">VS Code</div>
+              <div class="text-muted" style="font-size:.75rem;">First-class extension</div>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="card border-0 bg-white shadow-sm text-center p-3 h-100">
+              <div class="fs-2">🧠</div>
+              <div class="fw-bold small mt-1">JetBrains IDEs</div>
+              <div class="text-muted" style="font-size:.75rem;">IntelliJ, PyCharm, etc.</div>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="card border-0 bg-white shadow-sm text-center p-3 h-100">
+              <div class="fs-2">⌨️</div>
+              <div class="fw-bold small mt-1">Terminal</div>
+              <div class="text-muted" style="font-size:.75rem;">Any shell on Mac/Win/Linux</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 3: GLOSSARY -->
+<section class="py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <div class="eyebrow">Section 3</div>
+      <h2 class="brand-serif">Key Terms &amp; Definitions</h2>
+      <p class="text-muted">A reference glossary for Claude AI and Claude Code vocabulary.</p>
+    </div>
+
+    <div class="row g-4">
+
+      <!-- Claude AI Terms -->
+      <div class="col-lg-6">
+        <h4 class="brand-serif mb-3"><i class="bi bi-chat-dots text-primary me-2"></i>Claude AI Terms</h4>
+        <div class="accordion" id="claudeAITerms">
+
+          <div class="accordion-item border-0 shadow-sm mb-2">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#term-llm">
+                Large Language Model (LLM)
+              </button>
+            </h2>
+            <div id="term-llm" class="accordion-collapse collapse" data-bs-parent="#claudeAITerms">
+              <div class="accordion-body text-muted">A type of AI model trained on massive amounts of text that learns statistical patterns in language. Given an input (a prompt), it generates the most statistically likely useful continuation. Claude is an LLM built by Anthropic.</div>
+            </div>
+          </div>
+
+          <div class="accordion-item border-0 shadow-sm mb-2">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#term-prompt">
+                Prompt
+              </button>
+            </h2>
+            <div id="term-prompt" class="accordion-collapse collapse" data-bs-parent="#claudeAITerms">
+              <div class="accordion-body text-muted">The text input you send to Claude. A well-crafted prompt gives Claude the context, constraints, and goal it needs to produce a useful response. Prompt engineering is the practice of refining prompts to improve output quality.</div>
+            </div>
+          </div>
+
+          <div class="accordion-item border-0 shadow-sm mb-2">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#term-token">
+                Token
+              </button>
+            </h2>
+            <div id="term-token" class="accordion-collapse collapse" data-bs-parent="#claudeAITerms">
+              <div class="accordion-body text-muted">The basic unit Claude processes. A token is roughly 3–4 characters or about ¾ of a word. "Hello world" is 2–3 tokens. Models have a maximum context window measured in tokens (Claude supports up to 200 000).</div>
+            </div>
+          </div>
+
+          <div class="accordion-item border-0 shadow-sm mb-2">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#term-context-window">
+                Context Window
+              </button>
+            </h2>
+            <div id="term-context-window" class="accordion-collapse collapse" data-bs-parent="#claudeAITerms">
+              <div class="accordion-body text-muted">The maximum amount of text (measured in tokens) that Claude can "see" at once — including everything in the conversation so far plus the current message. Information outside the context window is not visible to the model.</div>
+            </div>
+          </div>
+
+          <div class="accordion-item border-0 shadow-sm mb-2">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#term-constitutional-ai">
+                Constitutional AI
+              </button>
+            </h2>
+            <div id="term-constitutional-ai" class="accordion-collapse collapse" data-bs-parent="#claudeAITerms">
+              <div class="accordion-body text-muted">Anthropic's training approach that uses a set of written principles (a "constitution") to guide the model's values. Instead of relying entirely on human feedback for every case, the model is trained to critique and revise its own outputs against those principles.</div>
+            </div>
+          </div>
+
+          <div class="accordion-item border-0 shadow-sm mb-2">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#term-hallucination">
+                Hallucination
+              </button>
+            </h2>
+            <div id="term-hallucination" class="accordion-collapse collapse" data-bs-parent="#claudeAITerms">
+              <div class="accordion-body text-muted">When an LLM generates plausible-sounding but factually incorrect information. This happens because the model predicts likely text rather than looking up verified facts. Always verify critical information from authoritative sources.</div>
+            </div>
+          </div>
+
+          <div class="accordion-item border-0 shadow-sm mb-2">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#term-system-prompt">
+                System Prompt
+              </button>
+            </h2>
+            <div id="term-system-prompt" class="accordion-collapse collapse" data-bs-parent="#claudeAITerms">
+              <div class="accordion-body text-muted">Instructions set by the developer (or application) before the user conversation begins. The system prompt tells Claude its role, tone, and constraints — for example, "You are a helpful teaching assistant for a Python class."</div>
+            </div>
+          </div>
+
+          <div class="accordion-item border-0 shadow-sm mb-2">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#term-temperature">
+                Temperature
+              </button>
+            </h2>
+            <div id="term-temperature" class="accordion-collapse collapse" data-bs-parent="#claudeAITerms">
+              <div class="accordion-body text-muted">A parameter (0–1) that controls how "creative" or "random" Claude's output is. Low temperature (near 0) produces more deterministic, predictable responses. High temperature produces more varied, creative — but potentially less accurate — output.</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Claude Code Terms -->
+      <div class="col-lg-6">
+        <h4 class="brand-serif mb-3"><i class="bi bi-code-slash text-success me-2"></i>Claude Code Terms</h4>
+        <div class="accordion" id="claudeCodeTerms">
+
+          <div class="accordion-item border-0 shadow-sm mb-2">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#term-agentic">
+                Agentic AI
+              </button>
+            </h2>
+            <div id="term-agentic" class="accordion-collapse collapse" data-bs-parent="#claudeCodeTerms">
+              <div class="accordion-body text-muted">An AI that takes sequences of actions — reading files, running commands, calling APIs — to accomplish a goal, rather than simply generating text in a single response. Claude Code operates agentically inside your codebase.</div>
+            </div>
+          </div>
+
+          <div class="accordion-item border-0 shadow-sm mb-2">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#term-cli">
+                CLI (Command-Line Interface)
+              </button>
+            </h2>
+            <div id="term-cli" class="accordion-collapse collapse" data-bs-parent="#claudeCodeTerms">
+              <div class="accordion-body text-muted">A text-based interface where you interact with software by typing commands in a terminal. Claude Code's CLI lets developers chat with Claude directly from their project directory without leaving the terminal.</div>
+            </div>
+          </div>
+
+          <div class="accordion-item border-0 shadow-sm mb-2">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#term-tool-use">
+                Tool Use
+              </button>
+            </h2>
+            <div id="term-tool-use" class="accordion-collapse collapse" data-bs-parent="#claudeCodeTerms">
+              <div class="accordion-body text-muted">The ability of an LLM to call external functions or APIs to accomplish tasks. In Claude Code, built-in tools include reading/editing files, running bash commands, searching the web, and managing git. Developers can also define custom tools.</div>
+            </div>
+          </div>
+
+          <div class="accordion-item border-0 shadow-sm mb-2">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#term-mcp">
+                MCP (Model Context Protocol)
+              </button>
+            </h2>
+            <div id="term-mcp" class="accordion-collapse collapse" data-bs-parent="#claudeCodeTerms">
+              <div class="accordion-body text-muted">An open standard that lets Claude Code connect to external data sources and services (databases, APIs, internal tools) through a common interface. MCP servers act as adapters that expose capabilities Claude can call as tools.</div>
+            </div>
+          </div>
+
+          <div class="accordion-item border-0 shadow-sm mb-2">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#term-claude-md">
+                CLAUDE.md
+              </button>
+            </h2>
+            <div id="term-claude-md" class="accordion-collapse collapse" data-bs-parent="#claudeCodeTerms">
+              <div class="accordion-body text-muted">A special markdown file placed at the root of a project that Claude Code reads automatically at the start of every session. It typically documents the project structure, coding conventions, and workflow instructions so Claude always has relevant context.</div>
+            </div>
+          </div>
+
+          <div class="accordion-item border-0 shadow-sm mb-2">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#term-hooks">
+                Hooks
+              </button>
+            </h2>
+            <div id="term-hooks" class="accordion-collapse collapse" data-bs-parent="#claudeCodeTerms">
+              <div class="accordion-body text-muted">Shell commands configured in Claude Code's settings that run automatically in response to events — such as before a file is saved or after a command completes. Hooks let teams enforce linting, testing, or notification workflows consistently.</div>
+            </div>
+          </div>
+
+          <div class="accordion-item border-0 shadow-sm mb-2">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#term-slash-commands">
+                Slash Commands
+              </button>
+            </h2>
+            <div id="term-slash-commands" class="accordion-collapse collapse" data-bs-parent="#claudeCodeTerms">
+              <div class="accordion-body text-muted">Special shortcut commands typed with a leading slash (e.g. <code>/help</code>, <code>/clear</code>, <code>/review</code>) that trigger built-in or custom skills inside Claude Code without writing a full natural-language prompt.</div>
+            </div>
+          </div>
+
+          <div class="accordion-item border-0 shadow-sm mb-2">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#term-prompt-caching">
+                Prompt Caching
+              </button>
+            </h2>
+            <div id="term-prompt-caching" class="accordion-collapse collapse" data-bs-parent="#claudeCodeTerms">
+              <div class="accordion-body text-muted">A feature of the Anthropic API that stores processed prompt prefixes (like a large CLAUDE.md or codebase context) so they don't need to be re-processed on every request. This significantly reduces cost and latency for repeated, context-heavy interactions.</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+{% endblock %}
